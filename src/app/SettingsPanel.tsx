@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box, Text, useInput } from 'ink';
 import { settings } from '../config/settings';
 
@@ -10,10 +10,6 @@ const SettingsPanel: React.FC<Props> = ({ onClose }) => {
   const [config, setConfig] = useState(settings.getAll());
   const [editing, setEditing] = useState<string | null>(null);
   const [editValue, setEditValue] = useState('');
-
-  useEffect(() => {
-    setConfig(settings.getAll());
-  }, []);
 
   useInput((input, key) => {
     if (key.escape) {
@@ -42,8 +38,8 @@ const SettingsPanel: React.FC<Props> = ({ onClose }) => {
         setEditValue(prev => prev + input);
       }
     } else {
-      if (input >= '1' && input <= '6') {
-        const keys = Object.keys(config) as Array<keyof typeof config>;
+      if (input >= '1' && input <= '9') {
+        const keys = Object.keys(config) as string[];
         const idx = parseInt(input) - 1;
         if (idx < keys.length) {
           setEditing(keys[idx]);

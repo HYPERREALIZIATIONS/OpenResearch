@@ -7,8 +7,10 @@ interface Props {
 }
 
 const commands = [
-  { key: 'r', label: 'Research', command: 'research' },
-  { key: 'p', label: 'Reports', command: 'reports' },
+  { key: 'n', label: 'New Project', command: 'new-project' },
+  { key: 'o', label: 'Open Project', command: 'open-project' },
+  { key: 'r', label: 'Focus Chat', command: 'research' },
+  { key: 'c', label: 'Focus Canvas', command: 'canvas' },
   { key: 's', label: 'Settings', command: 'settings' },
   { key: 'q', label: 'Quit', command: 'quit' },
 ];
@@ -26,7 +28,7 @@ const CommandPalette: React.FC<Props> = ({ onClose, onCommand }) => {
     if (input === 'k' || key.upArrow) {
       setSelected(s => (s - 1 + commands.length) % commands.length);
     }
-    if (input === 'Enter') {
+    if (key.return) {
       onCommand(commands[selected].command);
     }
   });

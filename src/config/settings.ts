@@ -1,11 +1,14 @@
 import Conf from 'conf';
-import { AppConfig } from '../types';
+import { AppConfig, LLMProvider } from '../types';
 
 const DEFAULT_CONFIG: AppConfig = {
+  provider: 'openai',
+  apiKey: '',
+  model: 'gpt-4o-mini',
+  baseUrl: '',
   maxAgents: 4,
-  autoSaveReports: true,
-  reportFormat: 'markdown',
-  defaultOutputDir: './reports',
+  autoSave: true,
+  defaultOutputDir: './openresearch-data',
   theme: 'dark',
   fontSize: 14,
 };
@@ -20,11 +23,11 @@ export class SettingsManager {
     });
   }
 
-  get(key: keyof AppConfig): any {
+  get<K extends keyof AppConfig>(key: K): AppConfig[K] {
     return this.config.get(key);
   }
 
-  set(key: keyof AppConfig, value: any): void {
+  set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void {
     this.config.set(key, value);
   }
 
