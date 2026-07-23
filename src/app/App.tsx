@@ -296,7 +296,13 @@ const App: React.FC = () => {
     <Box flexDirection="column" height="100%">
       <Box borderStyle="single" borderColor="green" paddingX={1}>
         <Text bold color="green">
-          OpenResearch
+          ╔╗ ╔╗ ╔╦╗╔═╗╔╦╗╔═╗
+        </Text>
+        <Text bold color="cyan">
+          ╚═╗║   ║ ║ ║ ║╣ ╠═╣
+        </Text>
+        <Text bold color="magenta">
+          ╚═╝   ╩ ╚═╝═╩ ╩ ╩
         </Text>
         <Text color="gray"> | </Text>
         <Text color={currentProject ? 'white' : 'gray'}>

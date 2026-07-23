@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b2cbf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="40" fill="url(#bg)"/>
+
+  <!-- Terminal window -->
+  <rect x="40" y="60" width="320" height="280" rx="12" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+
+  <!-- Terminal header -->
+  <rect x="40" y="60" width="320" height="32" rx="12" fill="#0f3460"/>
+  <rect x="40" y="72" width="320" height="20" fill="#0f3460"/>
+  <circle cx="65" cy="76" r="6" fill="#ff5f56"/>
+  <circle cx="85" cy="76" r="6" fill="#ffbd2e"/>
+  <circle cx="105" cy="76" r="6" fill="#27c93f"/>
+
+  <!-- Terminal content lines -->
+  <rect x="55" y="105" width="120" height="8" rx="4" fill="#00d4ff" opacity="0.8"/>
+  <rect x="55" y="125" width="200" height="6" rx="3" fill="#e0e0e0" opacity="0.4"/>
+  <rect x="55" y="140" width="170" height="6" rx="3" fill="#e0e0e0" opacity="0.3"/>
+  <rect x="55" y="155" width="190" height="6" rx="3" fill="#e0e0e0" opacity="0.3"/>
+
+  <!-- Split pane divider -->
+  <line x1="200" y1="100" x2="200" y2="320" stroke="#7b2cbf" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Right panel content -->
+  <rect x="215" y="105" width="130" height="8" rx="4" fill="#7b2cbf" opacity="0.8"/>
+  <rect x="215" y="125" width="110" height="6" rx="3" fill="#e0e0e0" opacity="0.4"/>
+  <rect x="215" y="140" width="140" height="6" rx="3" fill="#e0e0e0" opacity="0.3"/>
+  <rect x="215" y="175" width="90" height="24" rx="4" fill="#27c93f" opacity="0.2"/>
+  <rect x="215" y="210" width="90" height="24" rx="4" fill="#00d4ff" opacity="0.2"/>
+  <rect x="215" y="245" width="90" height="24" rx="4" fill="#ffbd2e" opacity="0.2"/>
+
+  <!-- Agent nodes -->
+  <circle cx="130" cy="290" r="18" fill="#00d4ff" opacity="0.2" stroke="#00d4ff" stroke-width="2"/>
+  <text x="130" y="295" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="12" font-weight="bold">C</text>
+
+  <circle cx="180" cy="290" r="18" fill="#7b2cbf" opacity="0.2" stroke="#7b2cbf" stroke-width="2"/>
+  <text x="180" y="295" text-anchor="middle" fill="#7b2cbf" font-family="monospace" font-size="12" font-weight="bold">R</text>
+
+  <circle cx="230" cy="290" r="18" fill="#ff5f56" opacity="0.2" stroke="#ff5f56" stroke-width="2"/>
+  <text x="230" y="295" text-anchor="middle" fill="#ff5f56" font-family="monospace" font-size="12" font-weight="bold">V</text>
+
+  <circle cx="280" cy="290" r="18" fill="#27c93f" opacity="0.2" stroke="#27c93f" stroke-width="2"/>
+  <text x="280" y="295" text-anchor="middle" fill="#27c93f" font-family="monospace" font-size="12" font-weight="bold">P</text>
+
+  <!-- Connection lines between agents -->
+  <line x1="148" y1="290" x2="162" y2="290" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="198" y1="290" x2="212" y2="290" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="248" y1="290" x2="262" y2="290" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="200" y="370" text-anchor="middle" fill="url(#accent)" font-family="monospace" font-size="18" font-weight="bold">OpenResearch</text>
+</svg>

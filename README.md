@@ -1,5 +1,7 @@
 # OpenResearch
 
+![Logo](logo.svg)
+
 A non-delusional, critical thinking partner for entrepreneurs and creators — terminal-based multi-agent research TUI.
 
 ## Features
